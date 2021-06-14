@@ -9,6 +9,26 @@ body{
     font-family: 'Merriweather', serif;
 }
 
+.container{
+    max-width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.button__gradient{
+    background-image: linear-gradient(
+    to right,
+    #ff512f 0%,
+    #dd2476 51%,
+    #ff512f 100%
+  );
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 .navbar{
     background-color: #fff;
     display:flex;
@@ -42,10 +62,32 @@ body{
     border: 2px solid blue;
 }
 
+.hero__image__container{
+    width:100%;
+}
+
+.hero__image{
+    width: 100%;
+    border-radius: 8px;
+}
+
+.hero__text{
+    font-size: 30px;
+    margin: 20px 0;
+    color: #1d3557;
+}
+
 @media (min-width: 768px){
     .navbar{
         justify-content: space-between;
         padding: 2px 30px;
+    }
+
+    .hero__container{
+        margin-top: 30px;
+        display:flex;
+        flex-direction: row-reverse;
+        align-items: center;
     }
 }
 
@@ -54,8 +96,25 @@ body{
         width: 100px;
     }
 
-    .nav__item{
+    .button__gradient{
         padding: 12px;
         font-size: 20px;
+    }
+    .container{
+        max-width: 900px;
+    }
+
+    .hero__description{
+        width: 100%;
+    }
+
+    .hero__text{
+        font-size: 50px;;
+    }
+}
+
+@media(min-width:1400px){
+    .container{
+        max-width: 1250px;
     }
 }
