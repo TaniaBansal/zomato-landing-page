@@ -11,8 +11,10 @@ body{
 
 .container{
     max-width: 100%;
-    padding: 0 20px;
-    margin: 0 auto;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .button__gradient{
@@ -28,6 +30,7 @@ body{
   border-radius: 4px;
   cursor: pointer;
 }
+
 
 .navbar{
     background-color: #fff;
@@ -77,12 +80,55 @@ body{
     color: #1d3557;
 }
 
+
+.video__container{
+    margin-top: 60px;;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.video__footage{
+    position: relative;
+    
+}
+
+.video__footage::before{
+    background-image: linear-gradient(
+    to right,
+    #ff512f 0%,
+    #dd2476 51%,
+    #ff512f 100%
+  );
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  transform: translate(1rem, 1rem);
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.video__text{
+    width:100%;
+    margin-top: 40px;
+    color:#1d3557;
+    font-size: 20px;
+    font-weight:lighter;
+    text-align: center;
+    line-height: 1.2;
+}
+
 .explore__menu__text{
     font-size: 30px;
+    font-weight: 900;
     margin-top: 50px;
     margin-bottom: 25px;
     text-align: center;
-    color: #1d3557
+    color: #1d3557;
 }
 
 .food__card{
@@ -104,6 +150,157 @@ body{
     padding: 15px;
 }
 
+.restaurant__text{
+    font-weight: 900;
+    line-height: 1.2;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    text-align: left;
+    color: #1d3557;
+}
+
+.restaurant__images{
+   width:100%;
+}
+
+.restaurant__images__row1, .restaurant__images__row2{
+    width:100%;
+    display:flex;
+    gap: 10px;
+}
+
+.restaurant__images__row1{
+    align-items: baseline;
+    margin-bottom: 10px;;
+}
+
+.restaurant__images__row2{
+    flex-direction: row-reverse;
+}
+
+.restaurant__image1, .restaurant__image3{
+    width: 100%;
+    height: 90px;
+}
+
+.restaurant__image2, .restaurant__image4{
+    width: 120%;
+    height: 110px;
+}
+
+.restaurant__1, .restaurant__2, .restaurant__3, .restaurant__4{
+    width: 100%;
+    height:100%;
+    border-radius: 5px;
+}
+
+.updates__container{
+    margin-top: 60px;
+    width: 100%;
+  padding: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.updates__text{
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 900;
+    color: #1d3557;
+}
+
+.updates__input__field{
+    display: flex;
+    gap: 7px;
+    align-items: center;
+}
+
+.email__input{
+    border: 2px solid pink;
+    background-color: #faebeb;
+    color: #bdbcbc;;
+    font-weight: 700;
+    width: 180px;
+    height: 35px;
+    border-radius: 5px;
+}
+
+.email__input::placeholder{
+    padding: 10px;
+}
+
+.quote__section{
+    position: relative;
+    margin-top: 80px;
+}
+.quote__image{
+    width: 100%;
+    position: absolute;
+}    
+
+.quote__img{
+    width:100%;
+    height: 180px;
+    border-radius: 8px;
+}
+.quote__text{
+    position: absolute;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 0 1rem;
+    padding-top: 65px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+footer{
+    margin-top: 330px;
+    position:relative;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer__bg{
+    position:absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+    background-image: linear-gradient(
+    to right,
+    #ff512f 0%,
+    #dd2476 51%,
+    #ff512f 100%
+  );
+  z-index: -3;
+  border-radius: 15px 15px 0 0;
+}
+
+footer > img {
+    width: 300px;
+    filter: brightness(0) invert(1);
+  }
+
+  footer > ul {
+    margin-top: -1rem;
+    color: #fff;
+  }
+
+  footer > ul > li {
+    margin: 5px 0;
+  }
+  ul{
+      list-style: none;
+  }
+
+
+
+
 @media (min-width: 768px){
     .navbar{
         justify-content: space-between;
@@ -115,10 +312,28 @@ body{
         display:flex;
         flex-direction: row-reverse;
         align-items: center;
+        
+    }
+
+    .video__container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .video__footage{
+        margin-right: 2rem;
+    }
+
+    .video__text{
+        margin-left: 1rem;
+        font-size: 20px;
+        font-weight: 300;
+        
     }
 
     .explore__menu__container{
-        margin-top: 55px;
+        margin-top: 90px;
         position: relative;
     }
 
@@ -154,8 +369,43 @@ body{
         display: flex;
         justify-content: center;
     }
-    
+
+    .restaurant__container{
+        margin-top: 70px;
+        display: flex;
+        align-items: center;
+    }
+
+    .restaurant__text{
+        width:100%;
+        font-size: 30px;
+    }
+    .updates__input__field{
+        display: flex;
+       justify-content: center;
+    }
+    .email__input{
+        width: 320px;
+    }
+
+    .quote__img{
+        height: 300px;
+        width:100%
+    }
+    .quote__text{
+        padding-top: 97px;
+        font-size: 30px;
+    }
+
+    footer{
+        margin-top: 450px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
 }
+
+
 
 @media (min-width: 1020px){
     .navbar__brand{
@@ -175,11 +425,23 @@ body{
     }
 
     .hero__text{
-        font-size: 50px;;
+        font-size: 50px;
+        font-weight: 900;
+        line-height: 1;
+    }
+
+    .video__container{
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .video__text{
+        width: 60%;
     }
 
     .explore__menu__container{
-        margin-top: 80px;
+        margin-top: 90px;
     }   
     
     .food__card__lists{
@@ -188,6 +450,31 @@ body{
 
     .explore__menu__text{
         font-size: 50px;
+    }
+
+    .restaurant__container{
+        margin-top: 80px;
+    }
+    .restaurant__text{
+        width:100%;
+        font-size: 50px;
+    }
+   
+    .restaurant__image1, .restaurant__image3{
+        width: 100%;
+        height: 170px;
+    }
+    
+    .restaurant__image2, .restaurant__image4{
+        width: 120%;
+        height: 220px;
+    }
+
+    .updates__text{
+        font-size: 40px;;
+    }
+    .quote__text{
+        font-size: 35px;
     }
 }
 
